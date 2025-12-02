@@ -1,9 +1,8 @@
 import pandas as pd
-import numpy as np
 
 
 invalid_ids_sum = 0
-file_path = 'input.csv'
+file_path = 'input.txt'
 
 
 def read_id_database(file_path):

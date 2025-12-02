@@ -1,6 +1,7 @@
 # Initialize variables
 initial_knob_position = 50
 list_of_rotations = []
+input_file = 'input.txt'
 
 
 def read_rotations_from_file(input_file):
@@ -36,6 +37,6 @@ def calculate_anytime_at_zero(initial_position, list_of_rotations):
 
 
 if __name__ == "__main__":
-    read_rotations_from_file('2025/1_secret_entrance/input.txt')
-    # print(f'The password is: {calculate_times_at_zero(initial_knob_position, list_of_rotations)}')
+    read_rotations_from_file(input_file)
+    print(f'The password is: {calculate_times_at_zero(initial_knob_position, list_of_rotations)}')
     print(f'The method 0x434C49434B password is: {calculate_anytime_at_zero(initial_knob_position, list_of_rotations)}')
