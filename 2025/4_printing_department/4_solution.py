@@ -100,7 +100,7 @@ def get_adjacent_slots(shelf: list, index: int):
 def main():
     # print(get_shelf_comparisons(example))
     count_accessible_rolls = 0
-    input_file = '2025/4_printing_department/input.txt'
+    input_file = '2025/4_printing_department/4_input.txt'
     shelves = read_shelves_from_file(input_file)
 
     list_of_shelf_comparisons = get_shelf_comparisons(shelves)
@@ -113,6 +113,7 @@ def main():
                 count_accessible_rolls += 1
 
     print(count_accessible_rolls)
+
 
 if __name__ == '__main__':
     main()
