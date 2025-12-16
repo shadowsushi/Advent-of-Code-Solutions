@@ -15,6 +15,9 @@ Approach:
     2. Check if available IDs is in fresh IDs
     3. Sum available fresh IDs
 """
+from datetime import datetime
+
+
 example = '''3-5
 10-14
 16-20
@@ -28,9 +31,6 @@ example = '''3-5
 32
 '''
 debug = False
-
-
-from datetime import datetime
 
 
 def read_input(input_file):
@@ -94,8 +94,10 @@ def main():
     available_count = 0
     fresh_count = 0
 
-    fresh_ID_ranges, available_IDs = read_input('2025/5_cafeteria/5_input.txt')
-    # fresh_ID_ranges, available_IDs = read_input(example)
+    if debug:
+        fresh_ID_ranges, available_IDs = read_input(example)
+    else:
+        fresh_ID_ranges, available_IDs = read_input('2025/5_cafeteria/5_input.txt')
 
     fresh_ID_start_ends = get_id_start_ends(fresh_ID_ranges)
 
